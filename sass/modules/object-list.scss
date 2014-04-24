@@ -1,0 +1,52 @@
+//
+// Object List
+// --------------------------------------------------
+
+.object-list {}
+
+.object-list-item {
+    @include display-box;
+    @include box-align(start);
+    @include box-align(center);
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-top: 1px solid $lightbrown;
+    min-height: 68px;
+
+    .object-list-item-figure {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 100%;
+        display: block;
+    }
+
+    .object-list-item-body {
+        @include box-flex(1);
+        @include box-orient(vertical);
+
+        padding-left: 15px;
+
+        .name {
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            color: $darkgrey;
+            line-height: 1;
+        }
+        .description {
+            display: block;
+            font-size: 12px;
+            color: $midbrown;
+            line-height: 1;
+            padding-top: 2px;
+        }
+
+    }
+
+    .object-list-item-aside {
+
+    }
+
+}
