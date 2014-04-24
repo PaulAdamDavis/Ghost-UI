@@ -37,3 +37,4 @@ validation-report.json
 node_modules
 bower_components
 _gh_pages
+docs/_site

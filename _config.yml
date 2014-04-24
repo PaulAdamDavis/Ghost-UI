@@ -14,9 +14,8 @@ baseurl:            /
 url:                http://localhost:9001
 encoding:           UTF-8
 
-exclude:
-    - "jade"
-    - "vendor"
+exclude:            ["jade", "vendor"]
+include:            ["_dist"]
 
 # Custom vars
 current_version:    0.1.0

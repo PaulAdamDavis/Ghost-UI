@@ -57,7 +57,8 @@ module.exports = function (grunt) {
                     require: ['bourbon']
                 },
                 files: {
-                    'dist/css/<%= pkg.name %>.css': 'sass/screen.scss'
+                    'dist/css/<%= pkg.name %>.css': 'sass/screen.scss',
+                    'docs/dist/css/<%= pkg.name %>.css': 'sass/screen.scss'
                 }
             },
             compress: {
@@ -67,7 +68,8 @@ module.exports = function (grunt) {
                     require: ['bourbon']
                 },
                 files: {
-                    'dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss'
+                    'dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss',
+                    'docs/dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss'
                 }
             }
         },
@@ -86,7 +88,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: '**/*.scss',
-                tasks: ['sass']                
+                tasks: ['sass', 'dist']                
             }
         }
     });
