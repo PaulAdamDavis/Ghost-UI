@@ -234,17 +234,13 @@ body {
 .bs-docs-masthead,
 .bs-docs-header {
   position: relative;
-  padding: 30px 15px;
-  color: #cdbfe3;
+  /*padding: 30px 0;*/
+  color: #000;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: #6f5499;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
-  background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image:      -o-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image:         linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-  background-repeat: repeat-x;
+  
+  max-width: 1160px;
+  margin: 0 auto;
+
 }
 
  /* Masthead (headings and download button) */
@@ -312,7 +308,7 @@ body {
 }
 .bs-docs-header h1 {
   margin-top: 0;
-  color: #fff;
+  color: #000;
 }
 .bs-docs-header p {
   margin-bottom: 0;
@@ -325,21 +321,14 @@ body {
 
 @media (min-width: 768px) {
   .bs-docs-header {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    /*padding-top: 60px;
+    padding-bottom: 60px;*/
     font-size: 24px;
-    text-align: left;
+    /*text-align: left;*/
   }
   .bs-docs-header h1 {
     font-size: 60px;
     line-height: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .bs-docs-header h1,
-  .bs-docs-header p {
-    margin-right: 380px;
   }
 }
 
@@ -1472,18 +1461,22 @@ h1[id] {
 
 .gui-example {
   margin-bottom: 1em;
-  padding: 3em 1em 1em 1em;
+  padding: 3.5em 1.5em 1.5em 1.5em;
   position: relative;
   border: 1px solid #eee;
 }
 .gui-example:before {
   content: 'Example';
   text-transform: uppercase;
-  color: #eee;
+  color: #ccc;
+  background: #eee;
+  line-height: 2;
+  padding-left: 8px;
   font-size: 1em;
   position: absolute;
-  top: 5px;
-  left: 1em;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 h1:not(:first-child) {

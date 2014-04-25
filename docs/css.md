@@ -122,11 +122,26 @@ title: CSS
 
 # Role Labels
 
-<span class="role-label">Role Label</span>
-<span class="role-label owner">Owner</span>
-<span class="role-label admin">Admin</span>
-<span class="role-label editor">Editor</span>
+<div class="gui-example">
+    <span class="role-label">Role Label</span>
+    <span class="role-label owner">Owner</span>
+    <span class="role-label admin">Admin</span>
+    <span class="role-label editor">Editor</span>
+</div>
 
+{% highlight html %}
+<!-- Default owner label -->
+<span class="role-label">Role Label</span>
+
+<!-- Owner label, black -->
+<span class="role-label owner">Owner</span>
+
+<!-- Admin label, red -->
+<span class="role-label admin">Admin</span>
+
+<!-- Editor label, blue -->
+<span class="role-label editor">Editor</span>
+{% endhighlight %}
 
 
 
@@ -254,3 +269,128 @@ title: CSS
     </section>
 
 </div>
+
+
+
+# Forms
+
+Labels must be used inside a `<form>` tag.
+
+<div class="gui-example">
+
+    <form>
+
+        <fieldset>
+
+            <div class="form-group">
+                <label for="user-email">Email</label>
+                <input type="email" id="user-email" placeholder="someone@example.com">
+                <p>Used for notifications</p>
+            </div>
+
+            <div class="form-group">
+                <label for="blog-logo">Blog Logo</label>
+                <a class="button-add js-modal-logo">Upload Image</a>
+                <p>Display a sexy logo for your publication</p>
+            </div>
+
+            <div class="form-group">
+                <label for="user-bio">Bio</label>
+                <textarea id="user-bio" placeholder="Something about you. How do you take your coffee?"></textarea>
+                <p>Write about you, in 200 characters or less.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="permalinks">Dated Permalinks</label>
+                <input id="permalinks" name="general[permalinks]" type="checkbox" value="permalink">
+                <label class="checkbox" for="permalinks"></label>
+                <p>Include the date in your post URLs</p>
+            </div>
+
+            <div class="form-group">
+                <label for="activeTheme">Theme</label>
+                <select id="activeTheme" name="general[activeTheme]">
+                        <option value="Casper">Casper</option>
+                        <option value="My Awesome Theme">My Awesome Theme</option>
+                </select>
+                <p>Select a theme for your blog</p>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="button-save">Save</button>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</div>
+
+{% highlight html %}
+<form>
+
+    <fieldset>
+
+        <div class="form-group">
+            <label for="user-email">Email</label>
+            <input type="email" id="user-email" placeholder="someone@example.com">
+            <p>Used for notifications</p>
+        </div>
+
+        <div class="form-group">
+            <label for="blog-logo">Blog Logo</label>
+            <a class="button-add js-modal-logo">Upload Image</a>
+            <p>Display a sexy logo for your publication</p>
+        </div>
+
+        <div class="form-group">
+            <label for="user-bio">Bio</label>
+            <textarea id="user-bio" placeholder="Something about you. How do you take your coffee?"></textarea>
+            <p>Write about you, in 200 characters or less.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="permalinks">Dated Permalinks</label>
+            <input id="permalinks" name="general[permalinks]" type="checkbox" value="permalink">
+            <label class="checkbox" for="permalinks"></label>
+            <p>Include the date in your post URLs</p>
+        </div>
+
+        <div class="form-group">
+            <label for="activeTheme">Theme</label>
+            <select id="activeTheme" name="general[activeTheme]">
+                    <option value="Casper">Casper</option>
+                    <option value="My Awesome Theme">My Awesome Theme</option>
+            </select>
+            <p>Select a theme for your blog</p>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="button-save">Save</button>
+        </div>
+
+    </fieldset>
+
+</form>
+{% endhighlight %}
+
+
+
+
+# Dropdowns
+
+# Global
+
+# Icons
+
+# Modals
+
+# Nav bar
+
+# Navs
+
+# Notifications
+
+# Tables
+
+# Uploader
