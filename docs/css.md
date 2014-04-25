@@ -197,15 +197,34 @@ title: CSS
 # Object List
 
 <div class="gui-example">
-    
-    <div class="object-list">
+
+    <section class="object-list">
         
+        <h4 class="object-list-title">Invited users</h4>
+
+        <div class="object-list-item">
+            <span class="object-list-item-icon icon-mail">ic</span>
+            <div class="object-list-item-body">
+                <span class="name">example@email.com</span>
+                <span class="description">Invitation sent: 7 hours ago</span>
+            </div>
+            <aside class="object-list-item-aside">
+                <a class="object-list-action" href="#">Revoke</a>
+                <a class="object-list-action" href="#">Resend</a>
+            </aside>
+        </div>
+
+    </section>
+    
+    <section class="object-list">
+        
+        <h4 class="object-list-title">Active users</h4>
 
         <div class="object-list-item">
             <img class="object-list-item-figure" src="http://www.gravatar.com/avatar/f95828f4e92f1befebabfb7f65cdc8f2" alt="Photo of John O'Nolan">
             <div class="object-list-item-body">
-                <span class="name">John O'Nolan</span>
-                <span class="description">Last seen: 3 minutes ago</span>
+                <a href="#" class="name">John O'Nolan</a>
+                <a href="#" class="description">Last seen: 3 minutes ago</a>
             </div>
             <aside class="object-list-item-aside">
                 <span class="role-label owner">Owner</span>
@@ -222,8 +241,15 @@ title: CSS
                 <span class="role-label admin">Admin</span>
             </aside>
         </div>
+        <div class="object-list-item">
+            <img class="object-list-item-figure" src="https://s.gravatar.com/avatar/73bc36ee2c308a29afbcffde2535a362" alt="Photo of Paul Davis">
+            <div class="object-list-item-body">
+                <span class="name">Paul Davis</span>
+                <span class="description">Last seen: 4 days ago</span>
+            </div>
+        </div>
 
 
-    </div>
+    </section>
 
 </div>

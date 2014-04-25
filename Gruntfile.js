@@ -91,6 +91,7 @@ module.exports = function (grunt) {
                 tasks: ['sass', 'dist']                
             }
         }
+
     });
 
     // JS distribution task.
