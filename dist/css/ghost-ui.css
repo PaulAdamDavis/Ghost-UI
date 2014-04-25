@@ -456,12 +456,6 @@ th {
 
   to {
     opacity: 0; } }
-@-o-keyframes fade-out {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
 @keyframes fade-out {
   from {
     opacity: 1; }
@@ -743,12 +737,6 @@ This would then output full CSS something like this:
 
   to {
     opacity: 1; } }
-@-o-keyframes fadeIn {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
 @keyframes fadeIn {
   from {
     opacity: 0; }
@@ -1017,7 +1005,6 @@ main {
   text-transform: uppercase;
   color: #aaa9a2;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(25%, white), color-stop(100%, rgba(255, 255, 255, 0.9)));
   background-image: -webkit-linear-gradient(top, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%);
   background-image: linear-gradient(to bottom,white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%); }
   .floatingheader button, .floatingheader .button {
@@ -2063,7 +2050,7 @@ nav li a {
     background-image: -webkit-linear-gradient(bottom, #111213, #1d1e20);
     background-image: -moz-linear-gradient(bottom, #111213, #1d1e20);
     background-image: -ms-linear-gradient(bottom, #111213, #1d1e20);
-    background-image: linear, to top, #111213, #1d1e20;
+    background-image: linear-gradient(to top, #111213, #1d1e20);
     -webkit-transition: left 0.3s ease 0.2s;
     -moz-transition: left 0.3s ease 0.2s;
     transition: left 0.3s ease 0.2s; }
@@ -2216,9 +2203,9 @@ nav li a {
   display: inline-block;
   padding: 0 10px;
   color: #7d878a;
-  -webkit-transition: all 0.15s ease-out 0;
-  -moz-transition: all 0.15s ease-out 0;
-  transition: all 0.15s ease-out 0;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
   position: relative;
   top: 1px; }
   .post-settings:before {
@@ -2653,8 +2640,8 @@ nav li a {
     color: #e7e6db;
     display: inline-block;
     vertical-align: initial;
-    -webkit-transition: transform 1s ease;
-    -moz-transition: transform 1s ease;
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
     transition: transform 1s ease; }
   .image-uploader .media:hover {
     text-decoration: none; }
@@ -2763,7 +2750,6 @@ nav li a {
     display: block;
     overflow: hidden;
     background-color: whitesmoke;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #f9f9f9));
     background-image: -webkit-linear-gradient(top, whitesmoke, #f9f9f9);
     background-image: linear-gradient(to bottom,whitesmoke, #f9f9f9);
     border-radius: 12px;
@@ -2875,16 +2861,36 @@ nav li a {
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  -webkit-box-align: start;
-  -moz-box-align: start;
-  box-align: start;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: start;
+  -moz-justify-content: start;
+  -ms-justify-content: start;
+  -o-justify-content: start;
+  justify-content: start;
+  -ms-flex-pack: start;
   -webkit-box-align: center;
   -moz-box-align: center;
   box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   padding-left: 15px;
   padding-right: 15px;
   border-top: 1px solid #edece4;
   min-height: 68px; }
+  .object-list-item:hover {
+    background: #f7f7f3; }
+  .object-list-item:last-child:hover {
+    box-shadow: inset 0px -1px 0px #edece4; }
   .object-list-item .object-list-item-icon {
     width: 35px;
     height: 35px;
@@ -2907,29 +2913,41 @@ nav li a {
   .object-list-item .object-list-item-figure {
     width: 35px;
     border-radius: 100%;
-    display: block; }
+    display: block;
+    border: 1px solid #979797; }
   .object-list-item .object-list-item-body {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    padding-left: 15px; }
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch;
+    padding-left: 15px;
+    line-height: 1; }
     .object-list-item .object-list-item-body .name {
-      display: block;
+      display: inline-block;
       font-size: 15px;
       font-weight: 400;
-      color: #242628;
-      line-height: 1; }
+      color: #242628; }
     .object-list-item .object-list-item-body .description {
-      display: block;
+      display: inline-block;
       font-size: 12px;
       color: #c0bfb6;
-      line-height: 1;
-      padding-top: 2px; }
-  .object-list-item .object-list-item-aside .object-list-action, .object-list-item .object-list-item-aside .owner-label {
+      margin-top: 3px; }
+  .object-list-item .object-list-item-aside .object-list-action + .object-list-action {
     margin-left: 20px; }
+  .object-list-item .object-list-item-aside .role-label + .role-label {
+    margin-left: 5px; }
   .object-list-item .object-list-action {
     font-size: 11px;
     text-transform: uppercase;
@@ -3659,7 +3677,6 @@ body.zen {
     width: 20px;
     height: 26px;
     background-color: rgba(26, 28, 29, 0);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 28, 29, 0)), color-stop(100%, #1a1c1d));
     background-image: -webkit-linear-gradient(left, rgba(26, 28, 29, 0), #1a1c1d);
     background-image: linear-gradient(to right,rgba(26, 28, 29, 0), #1a1c1d);
     z-index: 9999;
@@ -3697,9 +3714,9 @@ body.zen {
     display: block;
     float: left;
     padding: 1px 8px 0 8px;
-    -webkit-transition: all 0.15s ease-out 0;
-    -moz-transition: all 0.15s ease-out 0;
-    transition: all 0.15s ease-out 0; }
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
     #entry-tags .tag-label:before {
       font-family: "Icons";
       font-weight: normal;
@@ -3755,9 +3772,9 @@ body.zen {
       margin-left: 4px;
       vertical-align: 10%;
       text-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
-      -webkit-transition: all 0.15s ease-out 0;
-      -moz-transition: all 0.15s ease-out 0;
-      transition: all 0.15s ease-out 0; }
+      -webkit-transition: all 0.15s ease-out 0s;
+      -moz-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
     #entry-tags .tag:hover {
       text-decoration: none; }
     #entry-tags .tag:hover {
@@ -4486,7 +4503,7 @@ body.zen {
       box-shadow: #edece4 0 -1px 0 inset, #edece4 1px 0 0;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(25%, white), color-stop(100%, rgba(255, 255, 255, 0.9)));
       background: -webkit-linear-gradient(top, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%);
-      background: linear, to bottom, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%; }
+      background: linear-gradient(to bottom, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%); }
       @media (max-width: 1000px) {
         .settings .settings-sidebar > header {
           padding-left: 15px; } }
@@ -4548,9 +4565,9 @@ body.zen {
           z-index: 300;
           border-top: #edece4 1px solid;
           box-shadow: #fff 1px 0 0, #edece4 0 1px 0;
-          -webkit-transition: all 0.15s ease-out 0;
-          -moz-transition: all 0.15s ease-out 0;
-          transition: all 0.15s ease-out 0; }
+          -webkit-transition: all 0.15s ease-out 0s;
+          -moz-transition: all 0.15s ease-out 0s;
+          transition: all 0.15s ease-out 0s; }
           .settings .settings-menu li.active a {
             color: #242628;
             font-weight: bold;
@@ -4668,7 +4685,7 @@ body.zen {
       background: -webkit-linear-gradient(top, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%);
       background: -o-linear-gradient(top, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%);
       background: -ms-linear-gradient(top, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%);
-      background: linear, to bottom, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%; }
+      background: linear-gradient(to bottom, white 0%, white 25%, rgba(255, 255, 255, 0.9) 100%); }
       @media (max-width: 1000px) {
         .settings .settings-content > header {
           padding-left: 15px; } }
@@ -4900,7 +4917,6 @@ body.zen {
       bottom: 0;
       height: 110px;
       background-color: transparent;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.3)));
       background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
       background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3)); }
   .settings .cover-image {

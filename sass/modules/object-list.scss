@@ -2,12 +2,9 @@
 // Object List
 // --------------------------------------------------
 
-
-
 .object-list + .object-list {
     margin-top: 34px;    
-} // .object-list + .object-list
-
+}
 
 .object-list {
     
@@ -16,22 +13,28 @@
         font-weight: normal;
         color: $midbrown;
         margin-bottom: 14px;
-    } // .object-list-title
+    }
 
 } // .object-list
 
-
 .object-list-item {
-    
-    @include display-box;
-    @include box-align(start);
-    @include box-align(center);
 
+    @include display(flex);
+    @include justify-content(start);
+    @include align-items(center);
+    
     padding-left: 15px;
     padding-right: 15px;
 
     border-top: 1px solid $lightbrown;
     min-height: 68px;
+
+    &:hover {
+        background: lighten($lightbrown, 5%);
+    }
+    &:last-child:hover {
+        box-shadow: inset 0px -1px 0px $lightbrown;
+    }
 
     .object-list-item-icon {
         width: 35px;
@@ -59,34 +62,38 @@
         width: 35px;
         border-radius: 100%;
         display: block;
+        border: 1px solid #979797;
     }
 
     .object-list-item-body {
-        @include box-flex(1);
-        @include box-orient(vertical);
-
+        
+        @include flex(1);
+        @include align-items(stretch);
+        
         padding-left: 15px;
+        line-height: 1;
 
         .name {
-            display: block;
+            display: inline-block;
             font-size: 15px;
             font-weight: 400;
             color: $darkgrey;
-            line-height: 1;
         }
         .description {
-            display: block;
+            display: inline-block;
             font-size: 12px;
             color: $midbrown;
-            line-height: 1;
-            padding-top: 2px;
+            margin-top: 3px;
         }
 
     } // .object-list-item-body
 
     .object-list-item-aside {
-        .object-list-action, .owner-label {
+        .object-list-action + .object-list-action {
             margin-left: 20px;
+        }
+        .role-label + .role-label {
+            margin-left: 5px;
         }
     }
 

@@ -205,7 +205,7 @@ title: CSS
         <div class="object-list-item">
             <span class="object-list-item-icon icon-mail">ic</span>
             <div class="object-list-item-body">
-                <span class="name">example@email.com</span>
+                <span class="name">example@email.com</span><br>
                 <span class="description">Invitation sent: 7 hours ago</span>
             </div>
             <aside class="object-list-item-aside">
@@ -223,10 +223,11 @@ title: CSS
         <div class="object-list-item">
             <img class="object-list-item-figure" src="http://www.gravatar.com/avatar/f95828f4e92f1befebabfb7f65cdc8f2" alt="Photo of John O'Nolan">
             <div class="object-list-item-body">
-                <a href="#" class="name">John O'Nolan</a>
+                <a href="#" class="name">John O'Nolan</a><br>
                 <a href="#" class="description">Last seen: 3 minutes ago</a>
             </div>
             <aside class="object-list-item-aside">
+                <span class="role-label editor">Editor</span>
                 <span class="role-label owner">Owner</span>
             </aside>
         </div>
@@ -234,7 +235,7 @@ title: CSS
         <div class="object-list-item">
             <img class="object-list-item-figure" src="http://www.gravatar.com/avatar/49ebcbbe9bb3ed1f5d5de91483de383c" alt="Photo of Hannah Wolfe">
             <div class="object-list-item-body">
-                <span class="name">Hannah Wolfe</span>
+                <span class="name">Hannah Wolfe</span><br>
                 <span class="description">Last seen: 2 days ago</span>
             </div>
             <aside class="object-list-item-aside">
@@ -244,7 +245,7 @@ title: CSS
         <div class="object-list-item">
             <img class="object-list-item-figure" src="https://s.gravatar.com/avatar/73bc36ee2c308a29afbcffde2535a362" alt="Photo of Paul Davis">
             <div class="object-list-item-body">
-                <span class="name">Paul Davis</span>
+                <span class="name">Paul Davis</span><br>
                 <span class="description">Last seen: 4 days ago</span>
             </div>
         </div>
