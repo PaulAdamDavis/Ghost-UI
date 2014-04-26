@@ -1482,3 +1482,13 @@ h1[id] {
 h1:not(:first-child) {
   margin-top: 5em;
 }
+
+.docs-todo {
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  letter-spacing: 1px;
+}

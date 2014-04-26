@@ -1417,6 +1417,39 @@ input[type="reset"], .button-alt, .button-link, .button-back {
     padding: 1em 1.8em;
     font-size: 14px;
     line-height: 16px; }
+  .btn[class*='icon-'], [class*='icon-'].button,
+  button[class*='icon-'],
+  input[class*='icon-'][type="button"], [class*='icon-'].button-save,
+  input[class*='icon-'][type="submit"], [class*='icon-'].button-add, [class*='icon-'].button-delete,
+  input[class*='icon-'][type="reset"], [class*='icon-'].button-alt, [class*='icon-'].button-link, [class*='icon-'].button-back {
+    position: relative;
+    padding-left: calc(1.37em + 36px); }
+    .btn[class*='icon-']:before, [class*='icon-'].button:before,
+    button[class*='icon-']:before,
+    input[class*='icon-'][type="button"]:before, [class*='icon-'].button-save:before,
+    input[class*='icon-'][type="submit"]:before, [class*='icon-'].button-add:before, [class*='icon-'].button-delete:before,
+    input[class*='icon-'][type="reset"]:before, [class*='icon-'].button-alt:before, [class*='icon-'].button-link:before, [class*='icon-'].button-back:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 35px;
+      line-height: 35px;
+      border-right: 1px solid rgba(36, 38, 40, 0.1);
+      opacity: 0.95; }
+    .btn[class*='icon-'].large, [class*='icon-'].large.button,
+    button[class*='icon-'].large,
+    input[class*='icon-'].large[type="button"], [class*='icon-'].large.button-save,
+    input[class*='icon-'].large[type="submit"], [class*='icon-'].large.button-add, [class*='icon-'].large.button-delete,
+    input[class*='icon-'].large[type="reset"], [class*='icon-'].large.button-alt, [class*='icon-'].large.button-link, [class*='icon-'].large.button-back {
+      padding-left: calc(1.8em + 46px); }
+      .btn[class*='icon-'].large:before, [class*='icon-'].large.button:before,
+      button[class*='icon-'].large:before,
+      input[class*='icon-'].large[type="button"]:before, [class*='icon-'].large.button-save:before,
+      input[class*='icon-'].large[type="submit"]:before, [class*='icon-'].large.button-add:before, [class*='icon-'].large.button-delete:before,
+      input[class*='icon-'].large[type="reset"]:before, [class*='icon-'].large.button-alt:before, [class*='icon-'].large.button-link:before, [class*='icon-'].large.button-back:before {
+        width: 46px;
+        line-height: 46px; }
 
 .button,
 button,
