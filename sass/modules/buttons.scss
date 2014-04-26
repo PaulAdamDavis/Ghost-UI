@@ -50,6 +50,32 @@
         font-size: 14px;
         line-height: 16px;
     }
+
+    // Styling for buttons with icons in them
+    &[class*='icon-'] {
+        position: relative;
+        padding-left: calc(1.37em + 36px);
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 35px;
+            line-height: 35px;
+            border-right: 1px solid rgba($darkgrey, 0.1);
+            opacity: 0.95;
+        }
+
+        &.large {
+            padding-left: calc(1.8em + 46px);
+            &:before {
+                width: 46px;
+                line-height: 46px;
+            }
+        }
+
+    }
+
 }
 
 // This is the default button style

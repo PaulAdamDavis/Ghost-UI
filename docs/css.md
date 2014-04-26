@@ -43,6 +43,7 @@ title: CSS
 <div class="gui-example">
     <a class="button">Standard</a>
     <a class="button large">Large</a>
+    <a class="button-add large">Add Large</a>
 </div>
 
 {% highlight html %}
@@ -51,6 +52,9 @@ title: CSS
 
 <!-- Large size -->
 <a class="button-large">Large</a>
+
+<!-- Large size, green -->
+<a class="button-add large">Add Large</a>
 {% endhighlight %}
 
 ## Button States
@@ -115,6 +119,23 @@ title: CSS
     <button type="button" class="button-alt">Split Up</button>
     <a class="options" href="#"><span class="hidden">Alt</span></a>
 </section>
+{% endhighlight %}
+
+
+
+
+## Icon Buttons
+
+You can use any of the [icons](/icons/) packaged with Ghost-UI here.
+
+<div class="gui-example">
+    <a class="button-add icon-mail">Button Icon</a>
+    <a class="button-add icon-add large">Add Large</a>
+</div>
+
+{% highlight html %}
+<!--  -->
+<a class="button button-icon icon-mail">Button Icon</a>
 {% endhighlight %}
 
 
@@ -331,24 +352,28 @@ Labels must be used inside a `<form>` tag.
 
     <fieldset>
 
+        <!-- Text input with label and description -->
         <div class="form-group">
             <label for="user-email">Email</label>
             <input type="email" id="user-email" placeholder="someone@example.com">
             <p>Used for notifications</p>
         </div>
 
+        <!-- Button with label and description -->
         <div class="form-group">
             <label for="blog-logo">Blog Logo</label>
             <a class="button-add js-modal-logo">Upload Image</a>
             <p>Display a sexy logo for your publication</p>
         </div>
 
+        <!-- Textarea with label and description -->
         <div class="form-group">
             <label for="user-bio">Bio</label>
             <textarea id="user-bio" placeholder="Something about you. How do you take your coffee?"></textarea>
             <p>Write about you, in 200 characters or less.</p>
         </div>
 
+        <!-- Checkboc with label and description -->
         <div class="form-group">
             <label for="permalinks">Dated Permalinks</label>
             <input id="permalinks" name="general[permalinks]" type="checkbox" value="permalink">
@@ -356,6 +381,7 @@ Labels must be used inside a `<form>` tag.
             <p>Include the date in your post URLs</p>
         </div>
 
+        <!-- Select dropdown with label and description -->
         <div class="form-group">
             <label for="activeTheme">Theme</label>
             <select id="activeTheme" name="general[activeTheme]">
@@ -365,6 +391,7 @@ Labels must be used inside a `<form>` tag.
             <p>Select a theme for your blog</p>
         </div>
 
+        <!-- Submit button -->
         <div class="form-group">
             <button type="button" class="button-save">Save</button>
         </div>
