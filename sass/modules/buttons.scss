@@ -61,6 +61,7 @@
             left: 0;
             bottom: 0;
             width: 35px;
+            font-size: 13px;
             line-height: 35px;
             border-right: 1px solid rgba($darkgrey, 0.1);
             opacity: 0.95;
@@ -71,6 +72,7 @@
             &:before {
                 width: 46px;
                 line-height: 46px;
+                font-size: 17px;
             }
         }
 
@@ -124,6 +126,18 @@ input[type="reset"] {
     @extend .btn;
     background: lighten($darkgrey, 10%);
     &:hover {background: $darkgrey;}
+    &[class*='icon-']:before {
+        border-right-color: lighten($darkgrey, 10%);
+    }
+}
+
+// Alternative button with more visual attention, but no extra semantic meaning
+.button-info {
+    @extend .btn;
+    background: #A1ADB3;
+    &:hover {
+        background: lighten(#A1ADB3, 10%);
+    }
 }
 
 // This applies normal link styles to de-emphasise a button

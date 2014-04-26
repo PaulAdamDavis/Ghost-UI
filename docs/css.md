@@ -13,6 +13,7 @@ title: CSS
 <a class="button-add">Add</a>
 <a class="button-delete">Delete</a>
 <a class="button-alt">Alt</a>
+<a class="button-info">Info</a>
 <a class="button-link">Link</a>
 </div>
  
@@ -31,6 +32,9 @@ title: CSS
 
 <!-- Alternate dark grey button -->
 <a class="button-alt">Alt</a>
+
+<!-- Lught grey button -->
+<a class="button-info">Info</a>
 
 <!-- Link transparent button -->
 <a class="button-link">Link</a>
@@ -129,8 +133,9 @@ title: CSS
 You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 
 <div class="gui-example">
-    <a class="button-add icon-mail">Button Icon</a>
-    <a class="button-add icon-add large">Add Large</a>
+    <a class="button-add icon-add">Button Icon</a>
+    <a class="button-alt icon-ghost">Button Icon</a>
+    <a class="button-save icon-add large">Add Large</a>
 </div>
 
 {% highlight html %}
