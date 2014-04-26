@@ -1365,7 +1365,7 @@ input[type="button"], .button-save,
 button[type="submit"],
 input[type="submit"], .button-add, .button-delete,
 button[type="reset"],
-input[type="reset"], .button-alt, .button-link, .button-back {
+input[type="reset"], .button-alt, .button-info, .button-link, .button-back {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1392,7 +1392,7 @@ input[type="reset"], .button-alt, .button-link, .button-back {
   button:hover,
   input[type="button"]:hover, .button-save:hover,
   input[type="submit"]:hover, .button-add:hover, .button-delete:hover,
-  input[type="reset"]:hover, .button-alt:hover, .button-link:hover, .button-back:hover {
+  input[type="reset"]:hover, .button-alt:hover, .button-info:hover, .button-link:hover, .button-back:hover {
     border-color: transparent;
     background: #f8f8f8;
     text-decoration: none; }
@@ -1400,20 +1400,20 @@ input[type="reset"], .button-alt, .button-link, .button-back {
   button:active,
   input[type="button"]:active, .button-save:active,
   input[type="submit"]:active, .button-add:active, .button-delete:active,
-  input[type="reset"]:active, .button-alt:active, .button-link:active, .button-back:active {
+  input[type="reset"]:active, .button-alt:active, .button-info:active, .button-link:active, .button-back:active {
     box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset; }
   .btn:disabled, .button:disabled,
   button:disabled,
   input[type="button"]:disabled, .button-save:disabled,
   input[type="submit"]:disabled, .button-add:disabled, .button-delete:disabled,
-  input[type="reset"]:disabled, .button-alt:disabled, .button-link:disabled, .button-back:disabled {
+  input[type="reset"]:disabled, .button-alt:disabled, .button-info:disabled, .button-link:disabled, .button-back:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
   .btn.large, .large.button,
   button.large,
   input.large[type="button"], .large.button-save,
   input.large[type="submit"], .large.button-add, .large.button-delete,
-  input.large[type="reset"], .large.button-alt, .large.button-link, .large.button-back {
+  input.large[type="reset"], .large.button-alt, .large.button-info, .large.button-link, .large.button-back {
     padding: 1em 1.8em;
     font-size: 14px;
     line-height: 16px; }
@@ -1421,19 +1421,20 @@ input[type="reset"], .button-alt, .button-link, .button-back {
   button[class*='icon-'],
   input[class*='icon-'][type="button"], [class*='icon-'].button-save,
   input[class*='icon-'][type="submit"], [class*='icon-'].button-add, [class*='icon-'].button-delete,
-  input[class*='icon-'][type="reset"], [class*='icon-'].button-alt, [class*='icon-'].button-link, [class*='icon-'].button-back {
+  input[class*='icon-'][type="reset"], [class*='icon-'].button-alt, [class*='icon-'].button-info, [class*='icon-'].button-link, [class*='icon-'].button-back {
     position: relative;
     padding-left: calc(1.37em + 36px); }
     .btn[class*='icon-']:before, [class*='icon-'].button:before,
     button[class*='icon-']:before,
     input[class*='icon-'][type="button"]:before, [class*='icon-'].button-save:before,
     input[class*='icon-'][type="submit"]:before, [class*='icon-'].button-add:before, [class*='icon-'].button-delete:before,
-    input[class*='icon-'][type="reset"]:before, [class*='icon-'].button-alt:before, [class*='icon-'].button-link:before, [class*='icon-'].button-back:before {
+    input[class*='icon-'][type="reset"]:before, [class*='icon-'].button-alt:before, [class*='icon-'].button-info:before, [class*='icon-'].button-link:before, [class*='icon-'].button-back:before {
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       width: 35px;
+      font-size: 13px;
       line-height: 35px;
       border-right: 1px solid rgba(36, 38, 40, 0.1);
       opacity: 0.95; }
@@ -1441,15 +1442,16 @@ input[type="reset"], .button-alt, .button-link, .button-back {
     button[class*='icon-'].large,
     input[class*='icon-'].large[type="button"], [class*='icon-'].large.button-save,
     input[class*='icon-'].large[type="submit"], [class*='icon-'].large.button-add, [class*='icon-'].large.button-delete,
-    input[class*='icon-'].large[type="reset"], [class*='icon-'].large.button-alt, [class*='icon-'].large.button-link, [class*='icon-'].large.button-back {
+    input[class*='icon-'].large[type="reset"], [class*='icon-'].large.button-alt, [class*='icon-'].large.button-info, [class*='icon-'].large.button-link, [class*='icon-'].large.button-back {
       padding-left: calc(1.8em + 46px); }
       .btn[class*='icon-'].large:before, [class*='icon-'].large.button:before,
       button[class*='icon-'].large:before,
       input[class*='icon-'].large[type="button"]:before, [class*='icon-'].large.button-save:before,
       input[class*='icon-'].large[type="submit"]:before, [class*='icon-'].large.button-add:before, [class*='icon-'].large.button-delete:before,
-      input[class*='icon-'].large[type="reset"]:before, [class*='icon-'].large.button-alt:before, [class*='icon-'].large.button-link:before, [class*='icon-'].large.button-back:before {
+      input[class*='icon-'].large[type="reset"]:before, [class*='icon-'].large.button-alt:before, [class*='icon-'].large.button-info:before, [class*='icon-'].large.button-link:before, [class*='icon-'].large.button-back:before {
         width: 46px;
-        line-height: 46px; }
+        line-height: 46px;
+        font-size: 17px; }
 
 .button,
 button,
@@ -1492,6 +1494,13 @@ input[type="reset"] {
   background: #3c4043; }
   .button-alt:hover {
     background: #242628; }
+  .button-alt[class*='icon-']:before {
+    border-right-color: #3c4043; }
+
+.button-info {
+  background: #A1ADB3; }
+  .button-info:hover {
+    background: #bdc6ca; }
 
 .button-link {
   color: #5ba4e5;
@@ -3551,7 +3560,7 @@ nav li a {
   .entry-preview-content button,
   .entry-preview-content input[type="button"], .entry-preview-content .button-save,
   .entry-preview-content input[type="submit"], .entry-preview-content .button-add, .entry-preview-content .button-delete,
-  .entry-preview-content input[type="reset"], .entry-preview-content .button-alt, .entry-preview-content .button-link, .entry-preview-content .button-back,
+  .entry-preview-content input[type="reset"], .entry-preview-content .button-alt, .entry-preview-content .button-info, .entry-preview-content .button-link, .entry-preview-content .button-back,
   .content-preview-content .btn,
   .content-preview-content .button,
   .content-preview-content button,
@@ -3562,6 +3571,7 @@ nav li a {
   .content-preview-content .button-delete,
   .content-preview-content input[type="reset"],
   .content-preview-content .button-alt,
+  .content-preview-content .button-info,
   .content-preview-content .button-link,
   .content-preview-content .button-back {
     text-decoration: none;
