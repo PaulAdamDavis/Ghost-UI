@@ -1492,3 +1492,5 @@ h1:not(:first-child) {
   padding: 20px;
   letter-spacing: 1px;
 }
+
+.notifications {position: relative !important;}

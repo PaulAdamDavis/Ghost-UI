@@ -408,12 +408,74 @@ Labels must be used inside a `<form>` tag.
 
 
 
+# Notifications
+
+<div class="gui-example">
+    <section class="notification-success">
+        Success
+        <a class="close" href="#"><span class="hidden">Close</span></a>
+    </section>
+    <section class="notification-error">
+        Error
+        <a class="close" href="#"><span class="hidden">Close</span></a>
+    </section>
+    <section class="notification-warn">
+        Warn
+        <a class="close" href="#"><span class="hidden">Close</span></a>
+    </section>
+    <section class="notification-info">
+        Info
+        <a class="close" href="#"><span class="hidden">Close</span></a>
+    </section>
+</div>
+
+{% highlight html %}
+<!-- Success green notification -->
+<section class="notification-success">
+    Success
+    <a class="close" href="#"><span class="hidden">Close</span></a>
+</section>
+
+<!-- Error red notification -->
+<section class="notification-error">
+    Error
+    <a class="close" href="#"><span class="hidden">Close</span></a>
+</section>
+
+<!-- Warning orange notification -->
+<section class="notification-warn">
+    Warn
+    <a class="close" href="#"><span class="hidden">Close</span></a>
+</section>
+
+<!-- Info blue notification -->
+<section class="notification-info">
+    Info
+    <a class="close" href="#"><span class="hidden">Close</span></a>
+</section>
+{% endhighlight %}
+
+## Notification Usage
+
+Individual notifications are appended inside a `.notifications` element, which positions them and sets the width.
+
+{% highlight html %}
+<aside id="notifications" class="notifications">
+    <div class="js-bb-notification" style="display: block; height: auto;">
+        <section class="notification-success notification-passive js-notification">
+            Saved
+            <a class="close" href="#"><span class="hidden">Close</span></a>
+        </section>
+    </div>
+</aside>
+{% endhighlight %}
+
+Notifications which need no immediate action (success) will automatically fade out after 3 seconds. This behavior is instantiated by the `.notification-passive` class.
+
 
 # Dropdowns
 
 # Global
-
-# Icons
 
 # Modals
 
@@ -421,7 +483,7 @@ Labels must be used inside a `<form>` tag.
 
 # Navs
 
-# Notifications
+
 
 # Tables
 
