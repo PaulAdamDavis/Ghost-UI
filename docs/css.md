@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Components
+title: CSS
 ---
+
+All of the standalone HTML elements.
 
 # Color Variables
 
