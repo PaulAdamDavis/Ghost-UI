@@ -1494,3 +1494,11 @@ h1:not(:first-child) {
 }
 
 .notifications {position: relative !important;}
+
+
+.color-list dt, .color-list dd {
+  padding: 5px 8px;
+}
+.color-list dd {
+  border-radius: 2px;
+}

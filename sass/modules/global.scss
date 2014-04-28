@@ -258,6 +258,86 @@ mark {
 
 
 /* ==========================================================================
+   Color Classes
+   ========================================================================== */
+
+
+.darkgrey {
+    color: $darkgrey;
+}
+.darkgrey-bg {
+    background-color: $darkgrey;
+}
+.grey {
+    color: $grey;
+}
+.grey-bg {
+    background-color: $grey;
+}
+.midgrey {
+    color: $midgrey;
+}
+.midgrey-bg {
+    background-color: $midgrey;
+}
+.lightgrey {
+    color: $lightgrey;
+}
+.lightgrey-bg {
+    background-color: $lightgrey;
+}
+
+
+.brown {
+    color: $brown;
+}
+.brown-bg {
+    background-color: $brown;
+}
+.midbrown {
+    color: $midbrown;
+}
+.midbrown-bg {
+    background-color: $midbrown;
+}
+.lightbrown {
+    color: $lightbrown;
+}
+.lightbrown-bg {
+    background-color: $lightbrown;
+}
+
+
+.blue {
+    color: $blue;
+}
+.blue-bg {
+    background-color: $blue;
+}
+
+.red {
+    color: $red;
+}
+.red-bg {
+    background-color: $red;
+}
+
+.orange {
+    color: $orange;
+}
+.orange-bg {
+    background-color: $orange;
+}
+
+.green {
+    color: $green;
+}
+.green-bg {
+    background-color: $green;
+}
+
+
+/* ==========================================================================
    Main Elements
    ========================================================================== */
 

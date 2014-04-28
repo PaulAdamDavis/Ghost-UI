@@ -973,6 +973,75 @@ mark {
   background-color: #ffc336; }
 
 /* ==========================================================================
+   Color Classes
+   ========================================================================== */
+.darkgrey {
+  color: #242628; }
+
+.darkgrey-bg {
+  background-color: #242628; }
+
+.grey {
+  color: #35393b; }
+
+.grey-bg {
+  background-color: #35393b; }
+
+.midgrey {
+  color: #7d878a; }
+
+.midgrey-bg {
+  background-color: #7d878a; }
+
+.lightgrey {
+  color: #e2edf2; }
+
+.lightgrey-bg {
+  background-color: #e2edf2; }
+
+.brown {
+  color: #aaa9a2; }
+
+.brown-bg {
+  background-color: #aaa9a2; }
+
+.midbrown {
+  color: #c0bfb6; }
+
+.midbrown-bg {
+  background-color: #c0bfb6; }
+
+.lightbrown {
+  color: #edece4; }
+
+.lightbrown-bg {
+  background-color: #edece4; }
+
+.blue {
+  color: #5ba4e5; }
+
+.blue-bg {
+  background-color: #5ba4e5; }
+
+.red {
+  color: #e25440; }
+
+.red-bg {
+  background-color: #e25440; }
+
+.orange {
+  color: #f2a925; }
+
+.orange-bg {
+  background-color: #f2a925; }
+
+.green {
+  color: #9fbb58; }
+
+.green-bg {
+  background-color: #9fbb58; }
+
+/* ==========================================================================
    Main Elements
    ========================================================================== */
 main {
