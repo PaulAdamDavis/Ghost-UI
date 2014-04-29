@@ -1494,28 +1494,3 @@ h1:not(:first-child) {
 }
 
 .notifications {position: relative !important;}
-
-
-.color-list dt, .color-list dd {
-  padding: 5px 8px;
-}
-.color-list dd {
-  border-radius: 2px;
-}
-
-.grid [class*='grid-'] {
-  float: left;
-}
-
-.grid .grid-9 {
-  width: 70%;
-} 
-.grid .grid-3 {
-  width: 25%;
-  margin-left: 5%;
-}
-
-.affix {
-  position: fixed;
-top: 20px;
-}

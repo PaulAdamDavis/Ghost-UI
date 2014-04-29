@@ -7,7 +7,7 @@ All of the standalone HTML elements.
 
 # Color Variables
 
-<dl class="color-list">
+<dl class="docs-color-list">
     
     <dt class="darkgrey">$darkgrey</dt>
     <dd style="color: #fff;" class="darkgrey-bg">$darkgrey</dd>
@@ -31,16 +31,16 @@ All of the standalone HTML elements.
     <dd class="lightbrown-bg">$lightbrown</dd>
     
     <dt class="blue">$blue</dt>
-    <dd class="blue-bg">$blue</dd>
+    <dd style="color: #fff;" class="blue-bg">$blue</dd>
     
     <dt class="red">$red</dt>
-    <dd class="red-bg">$red</dd>
+    <dd style="color: #fff;" class="red-bg">$red</dd>
     
     <dt class="orange">$orange</dt>
-    <dd class="orange-bg">$orange</dd>
+    <dd style="color: #fff;" class="orange-bg">$orange</dd>
     
     <dt class="green">$green</dt>
-    <dd class="green-bg">$green</dd>
+    <dd style="color: #fff;" class="green-bg">$green</dd>
 
 </dl>
 
@@ -240,12 +240,16 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 ## Keyboard (KBD)
 
 <div class="gui-example">
-    <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>g</kbd>
+    <p>Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>g</kbd></p>
 </div>
 
 {% highlight html %}
-<kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>g</kbd>
+<p>Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>g</kbd></p>
 {% endhighlight %}
+
+
+
+
 
 
 # Dropdowns
@@ -253,25 +257,25 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 <p>This just adds a downword-facing chevron, inheriting text &amp; link styles from its parents.</p>
 
 <div class="gui-example">
-    <a href="#" class="dropdown">
+    <a href="#" data-toggle="ul" class="dropdown">
         <span class="name">Dropdown Menu</span>
-    </a>
-    <a href="#" class="dropdown active">
-        <span class="name">Active Menu</span>
     </a>
 </div>
 
+
 {% highlight html %}
 <!-- Standard dropdown -->
-<a href="#" class="dropdown">
+<a href="#" data-toggle="ul" class="dropdown">
     <span class="name">Dropdown Menu</span>
 </a>
 
 <!-- Active dropdown (just darker in colour) -->
-<a href="#" class="dropdown active">
+<a href="#" data-toggle="ul" class="dropdown active">
     <span class="name">Active Menu</span>
 </a>
 {% endhighlight %}
+
+
 
 
 
@@ -607,10 +611,66 @@ Notifications which need no immediate action (success) will automatically fade o
 
 # Modals
 
-# Nav bar
-
-# Navs
-
 # Tables
+
+Tables in Ghost-UI don't need any classes, but there is one optional class: `plain`, which prevents the alternate rows having a light brown background color.
+
+<div class="gui-example">
+    <table>
+        <thead>
+            <tr>
+                <th>Head 1</th>
+                <th>Head 2</th>
+                <th>Head 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% highlight html %}
+<table>
+    <thead>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </tbody>
+</table>
+{% endhighlight %}
 
 # Uploader

@@ -1,0 +1,86 @@
+/*****
+    Styling specific to the Ghost-UI documentation
+    ---
+    Most of this is to help Ghost-UI elements & components
+    appear how they would when used in the correct context.
+*****/
+
+.docs-box {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px;
+    background: #FFF;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 5px;
+}
+
+.docs-box pre {
+    background: #f8f8f8;
+    border-color: #eee;
+}
+
+/*****
+    Generic example wrapper
+*****/
+
+.gui-example {
+    margin-bottom: 1em;
+    padding: 3.5em 1.5em 1.5em 1.5em;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+.gui-example:before {
+    content: 'Example';
+    text-transform: uppercase;
+    color: #ccc;
+    background: #eee;
+    line-height: 2;
+    padding-left: 8px;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.grid [class*='grid-'] {
+    float: left;
+}
+
+.grid .grid-9 {
+    width: 70%;
+} 
+.grid .grid-3 {
+    width: 25%;
+    margin-left: 5%;
+}
+
+
+/*****
+    Doc element styling
+*****/
+.affix {
+    position: fixed;
+    top: 20px;
+}
+
+
+/*****
+    Section fixes & styling
+*****/
+
+.notifications {
+    position: relative !important;
+}
+
+.docs-color-list dt, .docs-color-list dd {
+    padding: 5px 8px;
+}
+.docs-color-list dd {
+    border-radius: 3px;
+}

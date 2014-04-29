@@ -10,30 +10,25 @@
 <!-- Docs master nav -->
 {% include nav-main.html %}
 
-<br><br>
+<div class="docs-box">
+        
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.lead }}</p>
 
-<!-- Docs page layout -->
-<div class="bs-docs-header" id="content">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.lead }}</p>
-    </div>
-</div>
-
-<div class="container bs-docs-container">
 
     <div class="grid clearfix">
         <div class="grid-9">
             {{ content }}
         </div>
         <div class="grid-3">
-            <nav data-spy="affix" data-offset-top="190" data-offset-bottom="200">
+            <nav data-spy="affix" data-offset-top="102" data-offset-bottom="200">
                 {% if page.url == "/css/" %}
                     {% include nav-css.html %}
                 {% endif %}
             </nav>
         </div>
     </div>
+
 
 </div>
 
