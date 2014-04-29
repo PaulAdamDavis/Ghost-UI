@@ -605,12 +605,6 @@ Notifications which need no immediate action (success) will automatically fade o
 </dl>
 {% endhighlight %}
 
-# Dropdowns
-
-# Global
-
-# Modals
-
 # Tables
 
 Tables in Ghost-UI don't need any classes, but there is one optional class: `plain`, which prevents the alternate rows having a light brown background color.
@@ -674,3 +668,80 @@ Tables in Ghost-UI don't need any classes, but there is one optional class: `pla
 {% endhighlight %}
 
 # Uploader
+
+# Global
+
+# Modals
+
+At the bottom of the document, just before the `<script>` tags, there are 2 elements used by the modals JavaScript. HTML is appended to `#modal-container`, where as `.modal-background` is unhidden.
+
+<div class="gui-example" style="position: relative; height: 400px;">
+    <div id="modal-container" style="display: block; position: absolute;">
+        <article class="modal-action modal-style-wide fade js-modal in">
+            <section class="modal-content">
+                <section class="modal-body">
+                    <div>
+                        <section class="js-drop-zone image-uploader">
+                            <span class="media"><span class="hidden">Image Upload</span></span>
+                            <img class="js-upload-target" src="" style="display: none;" alt="logo">
+                            <input data-url="upload" class="js-fileupload main" type="file" name="uploadimage" accept="image/*">
+                            <div class="description">Add image</div>
+                            <div class="js-fail failed" style="display: none">Something went wrong :(</div>
+                            <button class="js-fail button-add" style="display: none">Try Again</button>
+                            <a class="image-url" title="Add image from URL">
+                            <span class="hidden">URL</span></a>
+                        </section>
+                    </div>
+                </section>
+                <footer class="modal-footer">
+                    <button class="js-button-accept button-save right">Save</button>
+                    <button class="js-button-reject true">Cancel</button>
+                </footer>
+            </section>
+        </article>
+    </div>
+    <div class="modal-background fade in" style="display: block; position: absolute;"></div>
+</div>
+
+{% highlight html %}
+<!-- Trigger modal -->
+<a href="#">Open Modal</a>
+
+<!-- Boilerplate elements -->
+<div id="modal-container"></div>
+<div class="modal-background fade"></div>
+{% endhighlight %}
+
+Here's a full example of a modal, with content.
+
+{% highlight html %}
+<!-- Modal content -->
+<div id="modal-container" style="display: block;">
+    
+    <article class="modal-action modal-style-wide fade js-modal in">
+        <section class="modal-content">
+            <section class="modal-body">
+                <div>
+                    <section class="js-drop-zone image-uploader">
+                        <span class="media"><span class="hidden">Image Upload</span></span>
+                        <img class="js-upload-target" src="" style="display: none;" alt="logo">
+                        <input data-url="upload" class="js-fileupload main" type="file" name="uploadimage" accept="image/*">
+                        <div class="description">Add image</div>
+                        <div class="js-fail failed" style="display: none">Something went wrong :(</div>
+                        <button class="js-fail button-add" style="display: none">Try Again</button>
+                        <a class="image-url" title="Add image from URL">
+                        <span class="hidden">URL</span></a>
+                    </section>
+                </div>
+            </section>
+            <footer class="modal-footer">
+                <button class="js-button-accept button-save right">Save</button>
+                <button class="js-button-reject true">Cancel</button>
+            </footer>
+        </section>
+    </article>
+</div>
+
+<!-- Transparent grey background -->
+<div class="modal-background fade in" style="display: block;"></div>
+{% endhighlight %}
