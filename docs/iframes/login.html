@@ -1,0 +1,36 @@
+---
+layout: none
+---
+<!doctype html>
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+<body class="ghost-login">
+    
+    <main role="main" id="main">
+        
+        <aside id="notifications" class="notifications">
+        
+        </aside>
+        
+        <section class="login-box js-login-box" style="opacity: 1;">
+            <form id="login" class="login-form" method="post" novalidate="novalidate">
+                <div class="email-wrap">
+                    <input class="email" type="email" placeholder="Email Address" name="email" autocapitalize="off" autocorrect="off">
+                </div>
+                <div class="password-wrap">
+                    <input class="password" type="password" placeholder="Password" name="password">
+                </div>
+                <button class="button-save" type="submit">Log in</button>
+                <section class="meta">
+                    <a class="forgotten-password" href="/ghost/forgotten/">Forgotten password?</a>
+                </section>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

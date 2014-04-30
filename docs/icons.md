@@ -66,9 +66,21 @@ icons:
     - lightning
 ---
 
-# All Icons
+# Icon List
 
-<table>
+<div class="gui-icons clearfix">
+    {% for icon in page.icons %}
+        <div class="gui-icon clearfix">
+            <span class="icon">
+                <span class="icon icon-{{icon}}"></span>
+            </span>
+            <span class="name">{{icon | replace:'-',' ' | capitalize}}</span><br>
+            <code class="var">icon-{{icon}}</code>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- <table class="table">
     <thead>
         <tr>
             <th>Icon</th>
@@ -97,7 +109,7 @@ icons:
         </tr>
     {% endfor %}
 
-</table>
+</table> -->
 
 # Using Icons
 
@@ -107,7 +119,7 @@ You can either add a CSS class to an element, or add it directly to a rule set i
 <a class="button icon-mail">Email</a>
 {% endhighlight %}
 
-{% highlight css %}
+{% highlight scss %}
 .element {
     @include icon($i-mail);
 }

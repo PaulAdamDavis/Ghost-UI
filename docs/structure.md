@@ -3,6 +3,8 @@ layout: default
 title: Structure
 ---
 
+These elements are larger structural elements that aren't intended to be used in multiple places.
+
 # Nav Bar
 
 <div class="gui-example">
@@ -76,80 +78,4 @@ Wrapping every single page inside Ghost is a `<main>` element, where the styling
         <!-- Content -->
     </div>
 </main>
-{% endhighlight %}
-
-
-
-# Navs
-
-<div class="docs-todo">
-    Needs an example
-</div>
-
-<div class="gui-example">
-    <nav>
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
-        </ul>
-    </nav>
-</div>
-
-{% highlight html %}
-<nav>
-    <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-        <li><a href="#">Link 5</a></li>
-    </ul>
-</nav>
-{% endhighlight %}
-
-
-# Floating Headers
-
-Floating headers are only currently used in the Ghost Editor. The styles are dependent on parent elements being present.
-
-<div class="gui-example">
-    <div style="position: relative; height: 40px;">
-        <div class="editor">
-            <div class="entry-markdown" style="bottom: 0; top: 0; box-shadow: none;">
-                <header class="floatingheader">
-                    <small>Markdown</small>
-                    <a class="markdown-help" href="#"><span class="hidden">What is Markdown?</span></a>
-                </header>
-            </div>
-            <div class="entry-preview" style="bottom: 0; top: 0; box-shadow: none;">
-                <header class="floatingheader">
-                    <small>Preview <span class="entry-word-count js-entry-word-count">642 words</span></small>
-                </header>
-            </div>
-        </div>
-    </div>
-</div>
-
-{% highlight html %}
-<div class="editor">
-    
-    <!-- The left side -->
-    <div class="entry-markdown">
-        <header class="floatingheader">
-            <small>Markdown</small>
-            <a class="markdown-help" href="#"><span class="hidden">What is Markdown?</span></a>
-        </header>
-    </div>
-    
-    <!-- And the right side -->
-    <div class="entry-preview">
-        <header class="floatingheader">
-            <small>Preview <span class="entry-word-count">642 words</span></small>
-        </header>
-    </div>
-
-</div>
 {% endhighlight %}

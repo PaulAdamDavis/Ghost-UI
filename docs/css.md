@@ -5,6 +5,9 @@ title: CSS
 
 All of the standalone HTML elements.
 
+These are designed to fit in as many places as possible, and unless noted, do not need any parent elements to look & function correctly.
+
+
 # Color Variables
 
 <dl class="docs-color-list">
@@ -605,11 +608,46 @@ Notifications which need no immediate action (success) will automatically fade o
 </dl>
 {% endhighlight %}
 
+
+
 # Tables
 
-Tables in Ghost-UI don't need any classes, but there is one optional class: `plain`, which prevents the alternate rows having a light brown background color.
+Tables in Ghost-UI have two styles.
+The first has horizontal borders and an alternating `$lightbrown` background. This comes from the `.table` class.
+The second is has no visual styling, but resets default styling. This has no class, as the CSS targets the `<table>` element.
 
-<div class="gui-example">
+The only real difference between the two styles is one has borders, a different `<th>` color and background, the other does not.
+
+<div class="gui-example" data-gui-title="Styled table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Head 1</th>
+                <th>Head 2</th>
+                <th>Head 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="gui-example" data-gui-title="Plain table">
     <table>
         <thead>
             <tr>
@@ -639,7 +677,7 @@ Tables in Ghost-UI don't need any classes, but there is one optional class: `pla
 </div>
 
 {% highlight html %}
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>Head 1</th>
@@ -744,4 +782,79 @@ Here's a full example of a modal, with content.
 
 <!-- Transparent grey background -->
 <div class="modal-background fade in" style="display: block;"></div>
+{% endhighlight %}
+
+
+# Navs
+
+<div class="docs-todo">
+    Needs an example
+</div>
+
+<div class="gui-example">
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+        </ul>
+    </nav>
+</div>
+
+{% highlight html %}
+<nav>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+    </ul>
+</nav>
+{% endhighlight %}
+
+
+# Floating Headers
+
+Floating headers are only currently used in the Ghost Editor. The styles are dependent on parent elements being present.
+
+<div class="gui-example">
+    <div style="position: relative; height: 40px;">
+        <div class="editor">
+            <div class="entry-markdown" style="bottom: 0; top: 0; box-shadow: none;">
+                <header class="floatingheader">
+                    <small>Markdown</small>
+                    <a class="markdown-help" href="#"><span class="hidden">What is Markdown?</span></a>
+                </header>
+            </div>
+            <div class="entry-preview" style="bottom: 0; top: 0; box-shadow: none;">
+                <header class="floatingheader">
+                    <small>Preview <span class="entry-word-count js-entry-word-count">642 words</span></small>
+                </header>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% highlight html %}
+<div class="editor">
+    
+    <!-- The left side -->
+    <div class="entry-markdown">
+        <header class="floatingheader">
+            <small>Markdown</small>
+            <a class="markdown-help" href="#"><span class="hidden">What is Markdown?</span></a>
+        </header>
+    </div>
+    
+    <!-- And the right side -->
+    <div class="entry-preview">
+        <header class="floatingheader">
+            <small>Preview <span class="entry-word-count">642 words</span></small>
+        </header>
+    </div>
+
+</div>
 {% endhighlight %}

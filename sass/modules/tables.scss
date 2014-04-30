@@ -2,7 +2,7 @@
 // Tables
 // --------------------------------------------------
 
-table {
+%table {
     @include baseline;
     @include box-sizing(border-box);
     width:100%;
@@ -15,6 +15,16 @@ table {
         line-height: 20px;
         text-align: left;
         vertical-align: middle;
+    }
+
+}
+
+.table {
+
+    @extend %table;    
+
+    th,
+    td {  
         border-top: 1px solid $lightbrown;
     }
 
@@ -44,4 +54,10 @@ table {
             background: transparent;
         }
     }
+}
+
+table {
+
+    @extend %table;
+
 }
