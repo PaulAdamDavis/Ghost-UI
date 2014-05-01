@@ -23,3 +23,7 @@ There's a good chance that some styles here are not packaged nicely to be used i
 <div class="gui-example" data-gui-title="Forgotten">
     <iframe src="/iframes/forgotten/" frameborder="0" style="width: 100%; height: 400px;"></iframe>
 </div>
+
+# Editor
+
+# Settings
