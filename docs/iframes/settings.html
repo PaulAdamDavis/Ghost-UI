@@ -1,0 +1,129 @@
+---
+layout: none
+---
+<!doctype html>
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+<body class="settings">
+    <header id="global-header" class="navbar">
+    <a class="ghost-logo" href="/" data-off-canvas="left" title="/">
+    <span class="hidden">Ghost </span>
+        </a>
+        <nav id="global-nav" role="navigation">
+            <ul id="main-menu">
+                
+                <li class="content"><a href="/ghost/">Content</a></li>
+                
+                <li class="editor"><a href="/ghost/editor/">New Post</a></li>
+                
+                <li class="settings active"><a href="/ghost/settings/">Settings</a></li>
+                
+                <li id="usermenu" class="usermenu subnav">
+                    <a href="#" data-toggle="ul" class="dropdown">
+                    <img class="avatar" src="https://s.gravatar.com/avatar/73bc36ee2c308a29afbcffde2535a362" alt="Avatar">
+                    <span class="name">Paul Davis</span>
+                        </a>
+                        <ul class="overlay" style="display: none;">
+                            <li class="usermenu-profile"><a href="/ghost/settings/user/">Your Profile</a></li>
+                            <li class="divider"></li>
+                            <li class="usermenu-help"><a href="http://ghost.org/forum/">Help / Support</a></li>
+                            <li class="divider"></li>
+                            <li class="usermenu-signout"><a href="/ghost/signout/">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main role="main" id="main">
+        
+        <aside id="notifications" class="notifications">
+        </aside>
+        
+        <div class="wrapper">
+            <aside class="settings-sidebar" role="complementary" data-apps="false"><header>
+                <h1 class="title">Settings</h1>
+            </header>
+            <nav class="settings-menu">
+                <ul>
+                    <li class="general active"><a href="#general">General</a></li>
+                    <li class="users"><a href="#user">User</a></li>
+                    <li class="apps" style="display: none;"><a href="#apps">Apps</a></li>
+                </ul>
+            </nav></aside>
+            <section class="settings-content active" data-filestorage="true" id="general" style="display: block;"><header>
+                <button class="button-back">Back</button>
+                <h2 class="title">General</h2>
+                <section class="page-actions">
+                    <button class="button-save">Save</button>
+                </section>
+            </header>
+            <section class="content">
+                <form id="settings-general" novalidate="novalidate">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="blog-title">Blog Title</label>
+                            <input id="blog-title" name="general[title]" type="text" value="Chuck Noris">
+                            <p>The name of your blog</p>
+                        </div>
+                        <div class="form-group description-container">
+                            <label for="blog-description">Blog Description</label>
+                            <textarea id="blog-description">Lorem ipsum dolor simet</textarea>
+                            <p>
+                            Describe what your blog is about
+                            <span class="word-count" style="color: rgb(158, 157, 149);">177</span>
+                                </p>
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <label for="blog-logo">Blog Logo</label>
+                            
+                            <a class="button-add js-modal-logo">Upload Image</a>
+                            
+                            <p>Display a sexy logo for your publication</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="blog-cover">Blog Cover</label>
+                            
+                            <a class="button-add js-modal-cover">Upload Image</a>
+                            
+                            <p>Display a cover image on your site</p>
+                        </div>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="email-address">Email Address</label>
+                                <input id="email-address" name="general[email-address]" type="email" value="example@email.com" autocapitalize="off" autocorrect="off">
+                                <p>Address to use for admin notifications</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="postsPerPage">Posts per page</label>
+                                <input id="postsPerPage" name="general[postsPerPage]" type="number" value="5">
+                                <p>How many posts should be displayed on each page</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="permalinks">Dated Permalinks</label>
+                                <input id="permalinks" name="general[permalinks]" type="checkbox" value="permalink">
+                                <label class="checkbox" for="permalinks"></label>
+                                <p>Include the date in your post URLs</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="activeTheme">Theme</label>
+                                <select id="activeTheme" name="general[activeTheme]">
+                                    <option value="Phantom">Phantom</option>
+                                    <option value="casper" selected="">Casper - 0.9.3</option>
+                                </select>
+                                <p>Select a theme for your blog</p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>
+        </div>
+        </main>
+        <div id="modal-container" style="display: none;"></div>
+        <div class="modal-background fade" style="display: none;"></div>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+---
+layout: none
+---
+<!doctype html>
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)| IEMobile |!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    {% include header.html %}
+</head>
+<body class="manage">
+    
+    <header id="global-header" class="navbar">
+        <a class="ghost-logo" href="#" data-off-canvas="left" title="/">
+        <span class="hidden">Ghost </span>
+        </a>
+        <nav id="global-nav" role="navigation">
+            <ul id="main-menu">
+                
+                <li class="content active"><a href="#">Content</a></li>
+                
+                <li class="editor"><a href="#">New Post</a></li>
+                
+                <li class="settings"><a href="#">Settings</a></li>
+                
+                <li id="usermenu" class="usermenu subnav">
+                    <a href="#" data-toggle="ul" class="dropdown">
+                    <img class="avatar" src="https://s.gravatar.com/avatar/73bc36ee2c308a29afbcffde2535a362" alt="Avatar">
+                    <span class="name">Paul Davis</span>
+                    </a>
+                    <ul class="overlay" style="display: none;">
+                        <li class="usermenu-profile"><a href="#">Your Profile</a></li>
+                        <li class="divider"></li>
+                        <li class="usermenu-help"><a href="#">Help / Support</a></li>
+                        <li class="divider"></li>
+                        <li class="usermenu-signout"><a href="#">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main role="main" id="main">
+    
+    <aside id="notifications" class="notifications">
+        
+    </aside>
+    
+    <section class="content-view-container">
+        <section class="content-list js-content-list">
+            <header class="floatingheader">
+                <section class="content-filter">
+                    <small>All Posts</small>
+                </section>
+                <a href="/ghost/editor/" class="button button-add" title="New Post"><span class="hidden">New Post</span></a>
+            </header>
+            <section class="content-list-content">
+                <ol><li><a class="permalink" href="#" title="Edit this post">
+                    <h3 class="entry-title">Advice &amp; Mistakes</h3>
+                    <section class="entry-meta">
+                        <span class="status">
+                            <span class="draft">Draft</span>
+                        </span>
+                    </section>
+                    </a>
+                </li><li><a class="permalink" href="#" title="Edit this post">
+                <h3 class="entry-title">Haptics</h3>
+                <section class="entry-meta">
+                    <span class="status">
+                        <time datetime="2014-04-26 02:31" class="date published">
+                        Published 6 days ago
+                        </time>
+                    </span>
+                </section>
+                </a>
+            </li></ol>
+        </section>
+    </section>
+    <section class="content-preview js-content-preview"><header class="floatingheader">
+        <button class="button-back" href="#">Back</button>
+        <a class="unfeatured" href="#" title="Feature this post">
+            <span class="hidden">Star</span>
+        </a>
+        <small>
+            <span class="status">Written</span>
+            <span class="normal">by</span>
+            <span class="author">Paul Davis</span>
+        </small>
+        <section class="post-controls">
+            <a class="post-edit" href="#" title="Edit Post"><span class="hidden">Edit Post</span></a>
+            <a class="post-settings" href="#" data-toggle=".post-settings-menu" title="Post Settings"><span class="hidden">Post Settings</span></a>
+            <div class="post-settings-menu menu-drop-right overlay" style="display: none;">
+                <form>
+                    <table class="plain">
+                        <tbody><tr class="post-setting">
+                            <td class="post-setting-label">
+                                <label for="url">URL</label>
+                            </td>
+                            <td class="post-setting-field">
+                                <input id="url" class="post-setting-slug" type="text" value="">
+                            </td>
+                        </tr>
+                        <tr class="post-setting">
+                            <td class="post-setting-label">
+                                <label for="pub-date">Pub Date</label>
+                            </td>
+                            <td class="post-setting-field">
+                                <input id="pub-date" class="post-setting-date" type="text" value="" placeholder="02 May 14 @ 11:48"><!--<span class="post-setting-calendar"></span>-->
+                            </td>
+                        </tr>
+                        <tr class="post-setting">
+                            <td class="post-setting-label">
+                                <span class="label">Static Page</span>
+                            </td>
+                            <td class="post-setting-item">
+                                <input id="static-page" class="post-setting-static-page" type="checkbox" value="">
+                                <label class="checkbox" for="static-page"></label>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </form>
+                <a class="delete" href="#">Delete This Post</a>
+            </div>
+        </section>
+    </header>
+    <section class="content-preview-content">
+        <div class="wrapper"><h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, porro, perferendis saepe ea repudiandae necessitatibus placeat ad dicta dolorem corporis autem voluptatem quaerat deserunt. Voluptatibus, minus, illo, eveniet, corporis beatae odit pariatur porro ratione cumque est sunt iste similique blanditiis.</p>
+            <p>Esse, distinctio officiis animi vitae itaque. Ea, ullam, adipisci, obcaecati, magni est fugiat ab nesciunt ex itaque maiores nulla eaque. Est ea modi facilis laborum voluptatum. Nemo, quidem, pariatur, itaque aliquam temporibus tempore sit adipisci dolores ullam voluptates necessitatibus delectus.</p>
+            <p>Incidunt, provident, alias sed nisi enim voluptatem velit aliquid assumenda modi amet neque rerum cupiditate consequatur cumque laboriosam eos repellat molestiae. Perferendis, totam, ullam, blanditiis recusandae assumenda veritatis esse impedit atque tempore repudiandae beatae rem accusantium quae sequi corporis voluptate.</p>
+        </section>
+    </section>
+</section>
+</main>
+</body></html>
