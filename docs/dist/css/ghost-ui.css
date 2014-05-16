@@ -1428,7 +1428,7 @@ input[type=checkbox]:checked + .checkbox:after {
  * Usage:
  * <button type="button" class="button">Default</button>
  */
-.btn, .button,
+.button,
 button,
 input[type="button"], .button-save,
 button[type="submit"],
@@ -1457,7 +1457,7 @@ input[type="reset"], .button-alt, .button-info, .button-link, .button-back {
   -webkit-transition: background 0.3s ease, border-color 0.3s ease;
   -moz-transition: background 0.3s ease, border-color 0.3s ease;
   transition: background 0.3s ease, border-color 0.3s ease; }
-  .btn:hover, .button:hover,
+  .button:hover,
   button:hover,
   input[type="button"]:hover, .button-save:hover,
   input[type="submit"]:hover, .button-add:hover, .button-delete:hover,
@@ -1465,20 +1465,20 @@ input[type="reset"], .button-alt, .button-info, .button-link, .button-back {
     border-color: transparent;
     background: #f8f8f8;
     text-decoration: none; }
-  .btn:active, .button:active,
+  .button:active,
   button:active,
   input[type="button"]:active, .button-save:active,
   input[type="submit"]:active, .button-add:active, .button-delete:active,
   input[type="reset"]:active, .button-alt:active, .button-info:active, .button-link:active, .button-back:active {
     box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset; }
-  .btn:disabled, .button:disabled,
+  .button:disabled,
   button:disabled,
   input[type="button"]:disabled, .button-save:disabled,
   input[type="submit"]:disabled, .button-add:disabled, .button-delete:disabled,
   input[type="reset"]:disabled, .button-alt:disabled, .button-info:disabled, .button-link:disabled, .button-back:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
-  .btn.large, .large.button,
+  .large.button,
   button.large,
   input.large[type="button"], .large.button-save,
   input.large[type="submit"], .large.button-add, .large.button-delete,
@@ -1486,14 +1486,14 @@ input[type="reset"], .button-alt, .button-info, .button-link, .button-back {
     padding: 1em 1.8em;
     font-size: 14px;
     line-height: 16px; }
-  .btn[class*='icon-'], [class*='icon-'].button,
+  [class*='icon-'].button,
   button[class*='icon-'],
   input[class*='icon-'][type="button"], [class*='icon-'].button-save,
   input[class*='icon-'][type="submit"], [class*='icon-'].button-add, [class*='icon-'].button-delete,
   input[class*='icon-'][type="reset"], [class*='icon-'].button-alt, [class*='icon-'].button-info, [class*='icon-'].button-link, [class*='icon-'].button-back {
     position: relative;
     padding-left: calc(1.37em + 36px); }
-    .btn[class*='icon-']:before, [class*='icon-'].button:before,
+    [class*='icon-'].button:before,
     button[class*='icon-']:before,
     input[class*='icon-'][type="button"]:before, [class*='icon-'].button-save:before,
     input[class*='icon-'][type="submit"]:before, [class*='icon-'].button-add:before, [class*='icon-'].button-delete:before,
@@ -1507,13 +1507,13 @@ input[type="reset"], .button-alt, .button-info, .button-link, .button-back {
       line-height: 35px;
       border-right: 1px solid rgba(36, 38, 40, 0.1);
       opacity: 0.95; }
-    .btn[class*='icon-'].large, [class*='icon-'].large.button,
+    [class*='icon-'].large.button,
     button[class*='icon-'].large,
     input[class*='icon-'].large[type="button"], [class*='icon-'].large.button-save,
     input[class*='icon-'].large[type="submit"], [class*='icon-'].large.button-add, [class*='icon-'].large.button-delete,
     input[class*='icon-'].large[type="reset"], [class*='icon-'].large.button-alt, [class*='icon-'].large.button-info, [class*='icon-'].large.button-link, [class*='icon-'].large.button-back {
       padding-left: calc(1.8em + 46px); }
-      .btn[class*='icon-'].large:before, [class*='icon-'].large.button:before,
+      [class*='icon-'].large.button:before,
       button[class*='icon-'].large:before,
       input[class*='icon-'].large[type="button"]:before, [class*='icon-'].large.button-save:before,
       input[class*='icon-'].large[type="submit"]:before, [class*='icon-'].large.button-add:before, [class*='icon-'].large.button-delete:before,
@@ -1631,16 +1631,16 @@ input[type="reset"] {
  *     <a class="options" href="#"><span class="hidden">Options</span></a>
  * </section>
  */
-.splitbtn, .splitbutton, .splitbutton-save, .splitbutton-add, .splitbutton-delete, .splitbutton-alt {
+.splitbutton, .splitbutton-save, .splitbutton-add, .splitbutton-delete, .splitbutton-alt {
   display: inline-block;
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .splitbtn button, .splitbutton button, .splitbutton-save button, .splitbutton-add button, .splitbutton-delete button, .splitbutton-alt button {
+  .splitbutton button, .splitbutton-save button, .splitbutton-add button, .splitbutton-delete button, .splitbutton-alt button {
     font-size: 11px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .splitbtn .options, .splitbutton .options, .splitbutton-save .options, .splitbutton-add .options, .splitbutton-delete .options, .splitbutton-alt .options {
+  .splitbutton .options, .splitbutton-save .options, .splitbutton-add .options, .splitbutton-delete .options, .splitbutton-alt .options {
     display: inline-block;
     position: relative;
     width: 35px;
@@ -1655,7 +1655,7 @@ input[type="reset"] {
     -webkit-transition: background-color 0.3s linear;
     -moz-transition: background-color 0.3s linear;
     transition: background-color 0.3s linear; }
-    .splitbtn .options:before, .splitbutton .options:before, .splitbutton-save .options:before, .splitbutton-add .options:before, .splitbutton-delete .options:before, .splitbutton-alt .options:before {
+    .splitbutton .options:before, .splitbutton-save .options:before, .splitbutton-add .options:before, .splitbutton-delete .options:before, .splitbutton-alt .options:before {
       font-family: "Icons";
       font-weight: normal;
       font-style: normal;
@@ -1686,25 +1686,25 @@ input[type="reset"] {
       -webkit-transition-timing-function: ease;
       -moz-transition-timing-function: ease;
       transition-timing-function: ease; }
-    .splitbtn .options:hover, .splitbutton .options:hover, .splitbutton-save .options:hover, .splitbutton-add .options:hover, .splitbutton-delete .options:hover, .splitbutton-alt .options:hover {
+    .splitbutton .options:hover, .splitbutton-save .options:hover, .splitbutton-add .options:hover, .splitbutton-delete .options:hover, .splitbutton-alt .options:hover {
       text-decoration: none; }
-    .splitbtn .options.active:before, .splitbutton .options.active:before, .splitbutton-save .options.active:before, .splitbutton-add .options.active:before, .splitbutton-delete .options.active:before, .splitbutton-alt .options.active:before {
+    .splitbutton .options.active:before, .splitbutton-save .options.active:before, .splitbutton-add .options.active:before, .splitbutton-delete .options.active:before, .splitbutton-alt .options.active:before {
       -webkit-transform: rotate(360deg);
       -moz-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
       -o-transform: rotate(360deg);
       transform: rotate(360deg); }
-    .splitbtn .options.up.active:before, .splitbutton .options.up.active:before, .splitbutton-save .options.up.active:before, .splitbutton-add .options.up.active:before, .splitbutton-delete .options.up.active:before, .splitbutton-alt .options.up.active:before {
+    .splitbutton .options.up.active:before, .splitbutton-save .options.up.active:before, .splitbutton-add .options.up.active:before, .splitbutton-delete .options.up.active:before, .splitbutton-alt .options.up.active:before {
       margin-top: -4px;
       -webkit-transform: rotate(540deg);
       -moz-transform: rotate(540deg);
       -ms-transform: rotate(540deg);
       -o-transform: rotate(540deg);
       transform: rotate(540deg); }
-    .splitbtn .options:hover, .splitbutton .options:hover, .splitbutton-save .options:hover, .splitbutton-add .options:hover, .splitbutton-delete .options:hover, .splitbutton-alt .options:hover {
+    .splitbutton .options:hover, .splitbutton-save .options:hover, .splitbutton-add .options:hover, .splitbutton-delete .options:hover, .splitbutton-alt .options:hover {
       box-shadow: none;
       background: #f8f8f8; }
-      .splitbtn .options:hover:before, .splitbutton .options:hover:before, .splitbutton-save .options:hover:before, .splitbutton-add .options:hover:before, .splitbutton-delete .options:hover:before, .splitbutton-alt .options:hover:before {
+      .splitbutton .options:hover:before, .splitbutton-save .options:hover:before, .splitbutton-add .options:hover:before, .splitbutton-delete .options:hover:before, .splitbutton-alt .options:hover:before {
         font-family: "Icons";
         font-weight: normal;
         font-style: normal;
@@ -1719,9 +1719,9 @@ input[type="reset"] {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
         transform: rotate(360deg); }
-      .splitbtn .options:hover:hover, .splitbutton .options:hover:hover, .splitbutton-save .options:hover:hover, .splitbutton-add .options:hover:hover, .splitbutton-delete .options:hover:hover, .splitbutton-alt .options:hover:hover {
+      .splitbutton .options:hover:hover, .splitbutton-save .options:hover:hover, .splitbutton-add .options:hover:hover, .splitbutton-delete .options:hover:hover, .splitbutton-alt .options:hover:hover {
         text-decoration: none; }
-    .splitbtn .options.up:hover:before, .splitbutton .options.up:hover:before, .splitbutton-save .options.up:hover:before, .splitbutton-add .options.up:hover:before, .splitbutton-delete .options.up:hover:before, .splitbutton-alt .options.up:hover:before {
+    .splitbutton .options.up:hover:before, .splitbutton-save .options.up:hover:before, .splitbutton-add .options.up:hover:before, .splitbutton-delete .options.up:hover:before, .splitbutton-alt .options.up:hover:before {
       font-family: "Icons";
       font-weight: normal;
       font-style: normal;
@@ -1746,7 +1746,7 @@ input[type="reset"] {
       -webkit-transition-timing-function: ease;
       -moz-transition-timing-function: ease;
       transition-timing-function: ease; }
-    .splitbtn .options.up:hover:hover, .splitbutton .options.up:hover:hover, .splitbutton-save .options.up:hover:hover, .splitbutton-add .options.up:hover:hover, .splitbutton-delete .options.up:hover:hover, .splitbutton-alt .options.up:hover:hover {
+    .splitbutton .options.up:hover:hover, .splitbutton-save .options.up:hover:hover, .splitbutton-add .options.up:hover:hover, .splitbutton-delete .options.up:hover:hover, .splitbutton-alt .options.up:hover:hover {
       text-decoration: none; }
 
 .splitbutton .options {
@@ -3629,24 +3629,8 @@ nav li a {
   .entry-preview-content h3,
   .content-preview-content h3 {
     font-size: 1.8em; }
-  .entry-preview-content .btn, .entry-preview-content .button,
-  .entry-preview-content button,
-  .entry-preview-content input[type="button"], .entry-preview-content .button-save,
-  .entry-preview-content input[type="submit"], .entry-preview-content .button-add, .entry-preview-content .button-delete,
-  .entry-preview-content input[type="reset"], .entry-preview-content .button-alt, .entry-preview-content .button-info, .entry-preview-content .button-link, .entry-preview-content .button-back,
-  .content-preview-content .btn,
-  .content-preview-content .button,
-  .content-preview-content button,
-  .content-preview-content input[type="button"],
-  .content-preview-content .button-save,
-  .content-preview-content input[type="submit"],
-  .content-preview-content .button-add,
-  .content-preview-content .button-delete,
-  .content-preview-content input[type="reset"],
-  .content-preview-content .button-alt,
-  .content-preview-content .button-info,
-  .content-preview-content .button-link,
-  .content-preview-content .button-back {
+  .entry-preview-content .btn,
+  .content-preview-content .btn {
     text-decoration: none;
     color: #35393b; }
   .entry-preview-content .img-placeholder,
