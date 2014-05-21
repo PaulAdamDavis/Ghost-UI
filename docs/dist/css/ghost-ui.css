@@ -2966,7 +2966,7 @@ nav li a {
 .object-list + .object-list {
   margin-top: 34px; }
 
-.object-list .object-list-title {
+.object-list-title {
   font-size: 13px;
   font-weight: normal;
   color: #c0bfb6;
@@ -3006,67 +3006,72 @@ nav li a {
     background: #f7f7f3; }
   .object-list-item:last-child:hover {
     box-shadow: inset 0px -1px 0px #edece4; }
-  .object-list-item .object-list-item-icon {
-    width: 35px;
-    height: 35px;
-    display: block;
-    border-radius: 100%;
-    background: #edece4;
-    font-size: 0px;
-    color: transparent;
-    overflow: hidden;
-    position: relative; }
-    .object-list-item .object-list-item-icon:before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      margin-top: -7px;
-      text-align: center;
-      color: #aaa9a2;
-      font-size: 14px; }
-  .object-list-item .object-list-item-figure {
-    width: 35px;
-    border-radius: 100%;
-    display: block;
-    border: 1px solid #979797; }
-  .object-list-item .object-list-item-body {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    box-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
-    -ms-flex-align: stretch;
-    padding-left: 15px;
-    line-height: 1; }
-    .object-list-item .object-list-item-body .name {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 400;
-      color: #242628; }
-    .object-list-item .object-list-item-body .description {
-      display: inline-block;
-      font-size: 12px;
-      color: #c0bfb6;
-      margin-top: 3px; }
-  .object-list-item .object-list-item-aside .object-list-action + .object-list-action {
-    margin-left: 20px; }
-  .object-list-item .object-list-item-aside .role-label + .role-label {
-    margin-left: 5px; }
-  .object-list-item .object-list-action {
-    font-size: 11px;
-    text-transform: uppercase;
-    text-decoration: underline; }
+
+.object-list-item-icon {
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 100%;
+  background: #edece4;
+  font-size: 0px;
+  color: transparent;
+  overflow: hidden;
+  position: relative; }
+  .object-list-item-icon:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -7px;
+    text-align: center;
+    color: #aaa9a2;
+    font-size: 14px; }
+
+.object-list-item-figure {
+  width: 35px;
+  border-radius: 100%;
+  display: block;
+  border: 1px solid #979797; }
+
+.object-list-item-body {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  padding-left: 15px;
+  line-height: 1; }
+  .object-list-item-body .name {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #242628; }
+  .object-list-item-body .description {
+    display: inline-block;
+    font-size: 12px;
+    color: #c0bfb6;
+    margin-top: 3px; }
+
+.object-list-item-aside .object-list-action + .object-list-action {
+  margin-left: 20px; }
+.object-list-item-aside .role-label + .role-label {
+  margin-left: 5px; }
+
+.object-list-action {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: underline; }
 
 .manage {
   /* =============================================================================

@@ -174,6 +174,8 @@ These are designed to fit in as many places as possible, and unless noted, do no
 
 ## Icon Buttons
 
+The only place icon buttons work is on `.button`, `.button-[size]` and `.button-[color]`.
+
 You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 
 <div class="gui-example">
@@ -183,14 +185,22 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 </div>
 
 {% highlight html %}
-<!--  -->
-<a class="button button-icon icon-mail">Button Icon</a>
+<!-- Generic button with mail icon -->
+<a class="button-icon icon-mail">Button Icon</a>
+
+<!-- Alt (dark) button with Ghost icon -->
+<a class="button-alt icon-ghost">Button Icon</a>
+
+<!-- Large save (blue) button with add (plus) icon -->
+<a class="button-save icon-add large">Add Large</a>
 {% endhighlight %}
 
 
 
 
 # Role Labels
+
+There are little role labels that aren't meant to be used as anything else, such as links or buttons.
 
 <div class="gui-example">
     <span class="role-label">Role Label</span>
@@ -218,16 +228,18 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 
 # Code
 
+**Note:** Ghost-UI does no provide any syntax highlighting.
+
 ## Code & TT
 
+Styling for `<code>` tags. 
+
 <div class="gui-example">
-    <p>Code in a &lt;code&gt; tag <code>example code</code> looks like this.</p>
-    <p>Code in a &lt;tt&gt; tag <tt>example code</tt> looks like this.</p>
+    <p>A paragraph tag with a `code` tag <code>example code</code> looks like this.</p>
 </div>
 
 {% highlight html %}
-<p>Code in a `code` tag <code>example code</code> looks like this.</p>
-<p>Code in a `tt` tag <tt>example code</tt> looks like this.</p>
+<p>A paragraph tag with a `code` tag <code>example code</code> looks like this.</p>
 {% endhighlight %}
 
 ## Pre
@@ -241,6 +253,8 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
 {% endhighlight %}
 
 ## Keyboard (KBD)
+
+Styling for keyboard commands, simulating the look of a real-world keyboard keys.
 
 <div class="gui-example">
     <p>Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>g</kbd></p>
@@ -339,11 +353,65 @@ You can use any of the [icons](/icons/) packaged with Ghost-UI here.
             </div>
         </div>
 
-
     </section>
 
 </div>
 
+{% highlight html %}
+<section class="object-list">
+        
+    <h4 class="object-list-title">Invited users</h4>
+
+    <div class="object-list-item">
+        <span class="object-list-item-icon icon-mail">ic</span>
+        <div class="object-list-item-body">
+            <span class="name">example@email.com</span><br>
+            <span class="description">Invitation sent: 7 hours ago</span>
+        </div>
+        <aside class="object-list-item-aside">
+            <a class="object-list-action" href="#">Revoke</a>
+            <a class="object-list-action" href="#">Resend</a>
+        </aside>
+    </div>
+
+</section>
+
+<section class="object-list">
+    
+    <h4 class="object-list-title">Active users</h4>
+
+    <div class="object-list-item">
+        <img class="object-list-item-figure" src="http://www.gravatar.com/avatar/f95828f4e92f1befebabfb7f65cdc8f2" alt="Photo of John O'Nolan">
+        <div class="object-list-item-body">
+            <a href="#" class="name">John O'Nolan</a><br>
+            <a href="#" class="description">Last seen: 3 minutes ago</a>
+        </div>
+        <aside class="object-list-item-aside">
+            <span class="role-label editor">Editor</span>
+            <span class="role-label owner">Owner</span>
+        </aside>
+    </div>
+
+    <div class="object-list-item">
+        <img class="object-list-item-figure" src="http://www.gravatar.com/avatar/49ebcbbe9bb3ed1f5d5de91483de383c" alt="Photo of Hannah Wolfe">
+        <div class="object-list-item-body">
+            <span class="name">Hannah Wolfe</span><br>
+            <span class="description">Last seen: 2 days ago</span>
+        </div>
+        <aside class="object-list-item-aside">
+            <span class="role-label admin">Admin</span>
+        </aside>
+    </div>
+    <div class="object-list-item">
+        <img class="object-list-item-figure" src="https://s.gravatar.com/avatar/73bc36ee2c308a29afbcffde2535a362" alt="Photo of Paul Davis">
+        <div class="object-list-item-body">
+            <span class="name">Paul Davis</span><br>
+            <span class="description">Last seen: 4 days ago</span>
+        </div>
+    </div>
+
+</section>
+{% endhighlight %}
 
 
 # Forms

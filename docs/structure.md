@@ -150,3 +150,35 @@ Wrapping every single page inside Ghost (excluding the header & navbar) is a `<m
     </nav>
 </footer>
 </div>
+
+# Settings Nav
+
+<div class="gui-example settings" style="min-height: 142px;">
+    <aside class="settings-sidebar" role="complementary" data-apps="false" style="top: 26px;">
+        <header>
+            <h1 class="title">Settings</h1>
+        </header>
+        <nav class="settings-menu">
+            <ul>
+                <li class="general active"><a href="#general">General</a></li>
+                <li class="users"><a href="#user">User</a></li>
+                <li class="apps" style="display: none;"><a href="#apps">Apps</a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+
+{% highlight html %}
+<aside class="settings-sidebar" role="complementary" data-apps="false">
+    <header>
+        <h1 class="title">Settings</h1>
+    </header>
+    <nav class="settings-menu">
+        <ul>
+            <li class="general active"><a href="#general">General</a></li>
+            <li class="users"><a href="#user">User</a></li>
+            <li class="apps" style="display: none;"><a href="#apps">Apps</a></li>
+        </ul>
+    </nav>
+</aside>
+{% endhighlight %}
