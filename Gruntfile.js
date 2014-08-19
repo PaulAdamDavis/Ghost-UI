@@ -53,20 +53,15 @@ module.exports = function (grunt) {
         // compile sass to css
         sass: {
             dist: {
-                options: {
-                    loadPath: [breakpoint, normalize],
-                    require: ['bourbon']
-                },
+                // Adding .min for this task is a lie. It's only because Ghost looks for ghost-ui.min.css
                 files: {
-                    'dist/css/<%= pkg.name %>.css': 'sass/screen.scss',
-                    'docs/dist/css/<%= pkg.name %>.css': 'sass/screen.scss'
+                    'dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss',
+                    'docs/dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss'
                 }
             },
             compress: {
                 options: {
-                    style: 'compressed',
-                    loadPath: [breakpoint, normalize],
-                    require: ['bourbon']
+                    outputStyle: 'compressed'
                 },
                 files: {
                     'dist/css/<%= pkg.name %>.min.css': 'sass/screen.scss',
@@ -74,6 +69,23 @@ module.exports = function (grunt) {
                 }
             }
         },
+
+        autoprefixer: {
+
+            options: {
+                browsers: ["last 2 versions", "> 1%", "Explorer 10"]
+            },
+
+            // prefix the specified file
+            dist: {
+                options: {
+                    // Target-specific options go here.
+                },
+                src: 'dist/css/<%= pkg.name %>.min.css',
+                dest: 'dist/css/<%= pkg.name %>.min.css'
+            },
+        },
+
 
         // ### config for grunt-shell
         // command line tools
@@ -89,7 +101,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: '**/**.scss',
-                tasks: ['sass']                
+                tasks: ['sass:dist', 'autoprefixer', 'copy:docs']
             }
         }
     });

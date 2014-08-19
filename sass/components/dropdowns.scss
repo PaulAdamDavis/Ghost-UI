@@ -246,22 +246,22 @@
 
 %dropdown-triangle-top {
     &:before {
-        @include triangle(($dropdown_triangle * 2), #fff, up);
-        top: -$dropdown_triangle;
+        @include triangle($dropdown_triangle, #fff, up);
+        top: -($dropdown_triangle * 2);
     }
     &:after {
-        @include triangle(($dropdown_triangle * 2) + 2, #B0BEC4, up);
-        top: -($dropdown_triangle + 1);
+        @include triangle($dropdown_triangle + 2, #B0BEC4, up);
+        top: -($dropdown_triangle * 2 + 4);
     }
 }
 %dropdown-triangle-bottom {
     &:before {
-        @include triangle(($dropdown_triangle * 2), #fff, down);
-        bottom: -$dropdown_triangle;
+        @include triangle($dropdown_triangle, #fff, down);
+        bottom: -($dropdown_triangle * 2);
     }
     &:after {
-        @include triangle(($dropdown_triangle * 2) + 2, #B0BEC4, down);
-        bottom: -($dropdown_triangle + 1);
+        @include triangle($dropdown_triangle + 2, #B0BEC4, down);
+        bottom: -($dropdown_triangle * 2 + 4);
     }
 }
 %dropdown-triangle-center {
@@ -271,7 +271,7 @@
     }
     &:after {
         left: 50%;
-        margin-left: -($dropdown_triangle + 1);
+        margin-left: -($dropdown_triangle + 2);
     }
 }
 
@@ -281,7 +281,7 @@
         left: ($dropdown_triangle + 2);
     }
     &:after {
-        left: ($dropdown_triangle + 1);
+        left: $dropdown_triangle;
     }
 }
 %dropdown-triangle-right {
@@ -291,7 +291,7 @@
     }
     &:after {
         left: auto;
-        right: ($dropdown_triangle + 1);
+        right: $dropdown_triangle;
     }
 }
 
